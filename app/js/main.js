@@ -70,35 +70,35 @@ $(document).ready(function() {
 		var currPoint_i = 0;
 
 
-var vpoint = new createjs.Point( allpoints[currPoint_i].x, allpoints[currPoint_i].y);
+		var vpoint = new createjs.Point( allpoints[currPoint_i].x, allpoints[currPoint_i].y);
 
-var line = new createjs.Graphics();
-line.beginStroke("#0939F2")
-line.moveTo( vpoint.x, vpoint.y );
+		var line = new createjs.Graphics();
+		line.beginStroke("#0939F2")
+		line.moveTo( vpoint.x, vpoint.y );
 
-var s = new createjs.Shape(line);
-stage.addChild(s);
+		var s = new createjs.Shape(line);
+		stage.addChild(s);
 
-function tweenLineOneSegment() {
-	if (currPoint_i < allpoints.length) {
-		currPoint_i++;
-		createjs.Tween.get(vpoint).to(allpoints[currPoint_i], 1000,createjs.Ease.linear).call(handleComplete);
-	}
-}
-function handleComplete() {
-	console.log("what");
-	tweenLineOneSegment();
-}
+		function tweenLineOneSegment() {
+			if (currPoint_i < allpoints.length) {
+				currPoint_i++;
+				createjs.Tween.get(vpoint).to(allpoints[currPoint_i], 1000,createjs.Ease.linear).call(handleComplete);
+			}
+		}
+		function handleComplete() {
+			console.log("what");
+			tweenLineOneSegment();
+		}
 
-// kick off tweens
-tweenLineOneSegment();
+		// kick off tweens
+		tweenLineOneSegment();
 
-// have code fire every tick - draw line point by point rather than using actual beziers
-createjs.Ticker.addEventListener("tick", tick);
-function tick() { 
-	line.lineTo( vpoint.x, vpoint.y );
-  	stage.update();
-}
+		// have code fire every tick - draw line point by point rather than using actual beziers
+		createjs.Ticker.addEventListener("tick", tick);
+		function tick() { 
+			line.lineTo( vpoint.x, vpoint.y );
+		  	stage.update();
+		}
 
 
 
@@ -111,6 +111,20 @@ function tick() {
 
 	  	createjs.Ticker.setFPS(60);
 		createjs.Ticker.addEventListener("tick", stage);
+
+
+
+	/////////
+		/* ok - tween.js may not do the trick
+		*  will need to use GSAP Bezier plugin - https://greensock.com/docs/Plugins/BezierPlugin
+		*  with easeljs as drawing engine - https://greensock.com/forums/topic/10382-gsap-with-easeljs/
+		*   example - https://codepen.io/GreenSock/pen/ABkdL
+		*  tutorial - https://webdesign.tutsplus.com/tutorials/timelinemax-getting-a-handle-on-bezier-tweening--cms-23981
+		*  general spline code for canvas, no animation - https://stackoverflow.com/questions/7054272/how-to-draw-smooth-curve-through-n-points-using-javascript-html5-canvas
+		*/
+
+
+
 
 		 // new user added
 		session_history.on('child_added', (data) => {
