@@ -1,0 +1,64 @@
+
+$black: #1B0F27;
+$blue: #0939F2;
+$darkgrey: #372747;
+$pink: #E318F1;
+$turquoise: #2CACF2;
+$purple: #A900FF;
+$red: #EE1872;
+$green: #42F463;
+$fontcolor: #c184f2;
+html, body {
+	font-family: 'Source Code Pro', monospace;
+	text-transform: uppercase;
+	color: $fontcolor;
+	margin: 0;
+	padding: 0;
+	background: $black;
+	font-size: 16px;
+	line-height:32px;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	// TODO LAST: make this happen
+	overflow: hidden;
+text-align: center;
+}
+canvas {
+	margin: 0 auto;
+	border: 1px $darkgrey solid;
+}
+* { margin: 0; 
+	padding: 0;
+}
+#meta-container {
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 80%;
+	height: 30%;
+}
+ul {
+
+    -webkit-columns: 2; /* Chrome, Safari, Opera */
+    -moz-columns: 2; /* Firefox */
+    columns: 2;
+	li {
+		list-style: none;
+		padding-left: 26px;
+		background: url('/images/circle.svg') no-repeat 0 9px;
+		background-size: 14px 14px;
+	}
+}
+#aframe-container {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.hidden {
+	display: none;
+}

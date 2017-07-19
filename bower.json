@@ -1,0 +1,25 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [
+    "IDEO"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.5",
+    "neat": "~1.7.2",
+    "bitters": "~1.1.0",
+    "sass-mq": "~3.2.4"
+  },
+  "devDependencies": {
+  }
+}

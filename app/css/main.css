@@ -1,0 +1,55 @@
+html, body {
+  font-family: 'Source Code Pro', monospace;
+  text-transform: uppercase;
+  color: #c184f2;
+  margin: 0;
+  padding: 0;
+  background: #1B0F27;
+  font-size: 16px;
+  line-height: 32px; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  text-align: center; }
+
+canvas {
+  margin: 0 auto;
+  border: 1px #372747 solid; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+#meta-container {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 30%; }
+
+ul {
+  -webkit-columns: 2;
+  /* Chrome, Safari, Opera */
+  -moz-columns: 2;
+  /* Firefox */
+  columns: 2; }
+  ul li {
+    list-style: none;
+    padding-left: 26px;
+    background: url("/images/circle.svg") no-repeat 0 9px;
+    background-size: 14px 14px; }
+
+#aframe-container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */
