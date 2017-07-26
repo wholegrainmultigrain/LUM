@@ -14,6 +14,20 @@ body {
   overflow: hidden;
   text-align: center; }
 
+#logostuff {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -960px;
+  opacity: .2;
+  width: 1920px;
+  height: 1080px; }
+  #logostuff img {
+    margin: 0 auto;
+    margin-top: 400px;
+    height: 200px;
+    width: 200px; }
+
 canvas {
   margin: 0 auto;
   border: 1px #372747 solid; }
